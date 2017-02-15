@@ -23,6 +23,28 @@ Address.prototype.fullAddress = function() {
 
 //user interface logic
 $(document).ready(function() {
+  $("#add-address").click(function() {
+    $("#new-addresses").append('<div class="new-address">' +
+                                  '<div class="form-group">' +
+                                    '<label for="new-street">Street</label>' +
+                                    '<input type="text" class="form-control new-street">'+
+                                  '</div>' +
+                                  '<div class="form-group">' +
+                                    '<label for="new-city">City</label>' +
+                                    '<input type="text" class="form-control new-city">'+
+                                  '</div>' +
+                                  '<div class="form-group">' +
+                                    '<label for="new-state">State</label>' +
+                                    '<input type="text" class="form-control new-state">' +
+                                  '</div>' +
+                                  '<div class="form-group">' +
+                                    '<label for="new-zip">Zip</label>' +
+                                    '<input type="text" class="form-control new-zip">' +
+                                  '</div>' +
+                                '</div>');
+  });
+
+
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
 
